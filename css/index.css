@@ -6,7 +6,7 @@
   
   /* Style the header links */
   .header a {
-    float: left;
+    float: center;
     color: black;
     text-align: center;
     padding: 12px;
@@ -36,7 +36,7 @@
   
   /* Float the link section to the right */
   .header-left {
-    float: left;
+    float: center;
   }
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
