@@ -9,7 +9,6 @@
 </head> 
  
  <body> 
-
  <!--=====Header======-->
  <div class="header">
   <div class="header-right">
@@ -20,33 +19,87 @@
     <a href="#contact">Contact</a>
   </div>
 </div>
+ <!--===== /Header ======-->
 
+<div class="pages">
+  <a class="glow-button" href="#miller">Miller (2024)</a>
+  <a class="glow-button" href="#hangar">Steel hangar (2024)</a>
+  <a class="glow-button" href="#habib">Habib (2023)</a>
+</div>
+
+
+<!--===== Miller ======-->
+<div id="miller">
 <div class="row">
   <div class="column">
-    <h3>
-      Improving the implementation of bicycles in the GTAModel (Proposal)
+    <img src="images/networks.jpg">
+  </div>
+  <div class="column">
+    <h3 class="bold-blue" style="padding:0px">
+      Work in Prof. Miller's Lab (May-Aug 2024)
     </h3>
-
+    <h3 style="padding: 5px 0px">
+      Improving the implementation of bicycles in the <a href="https://tmg.utoronto.ca/doc/1.4/gtamodel/index.html" target="_blank">GTAModel</a> (written proposal, 2024)
+    </h3>
     <p>
       This proposal describes various steps in the development of the “bike mode” in the GTAModel. The  GTAModel is a regional transportation model used by the City of Toronto and Metrolinx and models various transportation modes like cars, trains, and walking, and is used to test outcomes of policy implementations like the OneFare program. 
     </p>
-    <img src="images/Emme screenshot.png" alt="">
-    <p>
-      I used Toronto’s OpenData portal and aggregated the data from Toronto's BikeShare stations and user trips. This was all done through Python (using the Pandas library) and required me to learn memory management as these datasets had more than 100,000 data points. I was able to use the data to understand trends in peak hour usage (top), and trips origins and destinations (bottom).
-    </p>
+  </div>
+  </div>
 
-    <p>
-      Next, I needed to understand the specific routes bicyclists take in Toronto. To do so, I spatially aggregated the GTAModel's existing bicycle network and traffic analysis zones, a 2024 network created by another research group, and additional OpenData pedestrian and bike networks, to identify gaps in the model's bike network using ArcGIS (see image at top of page). During this process, I also documented the model's existing bike routes (for the research group), as well as propose new "links" (i.e., bike routes) within the model to represent the existing bike lanes throughout the city that were not captured within the model. 
-    </p>
+  <div class="row">
+    <!-- text column -->
+    <div class="column"> 
+      <p>
+        I used Toronto’s OpenData portal and aggregated the data from Toronto's BikeShare stations and user trips. This was all done through Python (using the Pandas library) and required me to learn memory management as these datasets had more than 100,000 data points. I was able to use the data to understand trends in peak hour usage (top), and trips origins and destinations (bottom).
+      </p>
+    </div> 
+    <!-- images -->
+    <div class="column">
+      <div class="row2">
+        <img src="images/graphs.png">
+      </div>
+      <div class="row2">
+        <img src="images/dots.png">
+      </div>
+    </div>
   </div>
   
+    <p class="alone">
+      Next, I needed to understand the specific routes bicyclists take in Toronto. To do so, I spatially aggregated the GTAModel's existing bicycle network and traffic analysis zones, a 2024 network created by another research group, and additional OpenData pedestrian and bike networks, to identify gaps in the model's bike network using ArcGIS (see image at top of page). During this process, I also documented the model's existing bike routes (for the research group), as well as propose new "links" (i.e., bike routes) within the model to represent the existing bike lanes throughout the city that were not captured within the model. 
+    </p>
+
+  <div class="row">
+    <div class="column">
+      <p>
+        To improve the prediction of bike trips, I created an algorithm using the API of third-party software (see image) used by the GTAModel to predict route choices. This algorithm required an in-depth understanding of the model in order to identify edge cases and boundary conditions relevant in classifying bike routes on different road and safety conditions. I read the model's and Emme's documentation, learned to use Emme, and reviewed the literature on conceptualizing bike networks. 
+      </p>
+    </div>
+    <div class="column">
+      <img src="images/Emme screenshot.png">
+    </div>
+  </div>
+  
+
+  <p class="alone">
+    I used VSCode and GitHub for feedback and collaboration with my supervisor. This project developed my understanding of clean code & clean architecture principles, functional programming, and effective use of memory for managing large datasets. I also used GeoPandas and gained a better understanding of ArcGIS. Most importantly, I learned to work mostly independently and within an ambiguous framework: I originally had a list of requests from my supervisor that I had to figure out and turn into manageable, actionable tasks. 
+  </p>
+</div>
+<!--===== Miller ======-->
+
+<div id="hangar"><p>Hangar</p></div>
+
+<div id="habib"><p>Habib</p></div>
+
+
+<!--   
   <div class="column">
     <img src="images/Flowchart1 v5.png" alt="Forest" style="width:100%">
   </div>
   <div class="column">
     <img src="images/Emme screenshot.png" alt="Mountains" style="width:100%">
   </div>
-</div>
+</div> -->
 
  </body>  
 
