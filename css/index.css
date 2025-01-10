@@ -90,8 +90,11 @@
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .map-button a {
-    font-size: 10px;
+    font-size: 9px;
+  }
+  .map-button {
+    padding: 0px 0px;
   }
 }

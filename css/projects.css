@@ -68,3 +68,9 @@ padding: 5px;
   align-items: center;
   justify-content:space-evenly;
 }
+
+@media screen and (max-width: 800px) {
+  .glow-button {
+    font-size: 12px;
+  }
+}
