@@ -71,6 +71,6 @@ padding: 5px;
 
 @media screen and (max-width: 800px) {
   .glow-button {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
