@@ -47,6 +47,13 @@
   padding: 10px 50px 10px 0px;
 } */
 
+.map-container {
+  background-color: #cfe2f3ff;
+}
+
+.map-container p {
+  padding: 0px 10px 15px 10px;
+}
 
 /* .map-container:hover img {
   opacity:60%;
