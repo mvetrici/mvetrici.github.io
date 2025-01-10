@@ -42,9 +42,6 @@ body {
   }
 
 
-
-
-
 /* HEADER */
 .header {
     overflow: hidden;
@@ -92,6 +89,18 @@ body {
     }
     .header-right {
       float: none;
+    }
+    p, a {
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+      font-size: 12px;
     }
   }
 
