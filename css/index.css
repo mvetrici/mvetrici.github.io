@@ -10,8 +10,8 @@
 }
 
 .column1 {
-  float: left;
-  padding: 40px;
+  /* float: left; */
+  padding: 5px 40px 5px 40px;
   margin: 5px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .column2 {
-  float: left;
+  /* float: left; */
   width: 60%;
   padding: 10px 5px;
 }
@@ -35,10 +35,9 @@
 }
 
 /* Hover -------------------------------------- */
-.hover-text p { 
+/* .hover-text p { 
   position: relative;
   bottom: 100%;
-  /* left: 00%; */
   transform: translate(5%, -450%);
   float: left;
   opacity: 0;
@@ -46,13 +45,15 @@
   font-weight:700;
   color: black;
   padding: 10px 50px 10px 0px;
-}
+} */
+
+
 /* .map-container:hover img {
   opacity:60%;
 } */
 .map-container:hover .hover-text p { 
   opacity: 100%; /* Show text on hover */ 
-  text-align: right;
+  text-align: left;
 } 
 /* \Hover -------------------------------------- */
 

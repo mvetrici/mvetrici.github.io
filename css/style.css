@@ -94,3 +94,22 @@ body {
       float: none;
     }
   }
+
+
+/* -------------- FOOTER -------------- */
+  #footery {
+    padding: 10px 20px;
+    background-color: #00539f;
+  }
+  
+  #footery p {
+    text-align: left;
+    color: white;
+    line-height: 0.75;
+  }
+  
+  #footery a {
+    text-align: left;
+    color: white;
+    line-height: 0.75;
+  }
