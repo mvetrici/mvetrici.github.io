@@ -1,0 +1,14 @@
+@import "style.css";
+
+body {
+    background-color: #cfe2f3ff;
+    padding: 30px;
+}
+
+img {
+    padding: 10px 0px;
+}
+
+p {
+    padding: 0px 10px 0px 10px;
+}

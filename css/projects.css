@@ -80,3 +80,17 @@ padding: 5px;
     font-size: 8px;
   }
 }
+
+#hangar img:hover {
+  transform: scale(1.04);
+  transition: transform .6s;
+  box-shadow: 0 0 10px white;
+}
+
+#hangar {
+  background-color: #cfe2f3ff;
+}
+
+#hangar p {
+  padding: 0px 10px 10px 20px;
+}
