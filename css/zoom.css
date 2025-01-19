@@ -1,14 +1,24 @@
 @import "style.css";
 
 body {
-    background-color: #cfe2f3ff;
+    background-color: darkslategray;
     padding: 30px;
 }
 
 img {
-    padding: 10px 0px;
+    padding: 10px 10px 10px 10px;
 }
 
 p {
     padding: 0px 10px 0px 10px;
+}
+
+embed {
+    position: center;
+    padding: 10px;
+}
+
+div {
+    padding: 10px;
+    background-color: #cfe2f3ff;
 }

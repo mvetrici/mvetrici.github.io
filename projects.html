@@ -106,10 +106,64 @@
 </div>
 </div>
 
-  <p>In my third-year steel design course, I worked with a group to design a steel hangar. Although this project usually involves SAP500, which does a majority of the necessary calculations automatically, we were challenged to create the spreadsheets and make decisions regarding engineering assumptions. 
-    To approach the project, we delegated the task of creating the preliminary spreadsheet and the calculations to some of the group members, and I, along with some other members, worked on the structural analysis calculations. For simplicity, these were done by hand and then implemented within the spreadsheet. 
+<div class="row2">
+  <p>In my third-year steel design course, I worked with a group to design a steel hangar and office building. Although the course project usually involves SAP2000, which does a majority of the necessary calculations automatically, we were challenged to create the spreadsheets and make decisions regarding engineering assumptions using the Handbook of Steel Construction (HSC). 
+    To approach the project, we divided the tasks: some group members created the preliminary spreadsheet to organize the calculations, and I, along with some other members, worked on the structural analysis calculations. For simplicity, these were done by hand (see images) and then implemented within the spreadsheet. 
     </p>
+</div>
+  
+    <div class="row" style="padding: 5px 20px">
+      <div class="column">
+        <a href="zoom.html#hangar1" target="_blank">
+          <img src="images/brace_calc.png">
+          </a>
+      </div>
+      <div class="column">
+        <a href="zoom.html#hangar2" target="_blank">
+        <img src="images/connection_calc.png">
+        </a>
+      </div>
+      </div>
 
+  <div class="row2">
+    <p>
+      This project was largely iterative. For example, when designing the steel members used for the columns, we had to account for the loads of the beams the columns were carrying, along with the "self-weight" of the columns. In essence, we could not design the columns until we knew the total loading they had to bear, which depended on the particular column design we chose. Thus, along the course of the project, we slowly developed an intuition for designing the various structural member, developing strategies to estimate the total load a member might have to bear, then iteratively determining exactly which design is the most efficient. 
+    </p>
+  </div>
+
+    <div class="row" style="padding: 5px 20px">
+      <div class="column">
+        <a href="zoom.html#hangar3" target="_blank">
+          <img src="images/spreadsheet_before.png">
+          </a>
+      </div>
+      <div class="column">
+        <a href="zoom.html#hangar4" target="_blank">
+        <img src="images/spreadsheet_after.png">
+        </a>
+      </div>
+      </div>
+
+    <div class="row2">
+      <p>
+        Because of this, the group collaborated to develop the spreadsheet to optimize our design process. For example, I created a section of our spreadsheet that would automatically calculate the load resistance of a column without needing to manually which column design was used. Previously, we were using a version of the spreadsheet that required the user to input a particular column design before the resistance was calculated. After my update, we could test every single one of our current column designs at once without manually testing them one-by-one. 
+  Similarly, I applied my understanding of the nuanced and highly complex structural analysis of "beam-column" members, a particularly complicated type of structural member, and created a spreadsheet that would calculate their loading resistance. Once again, I focused on automating this process to minimize user-related input errors.
+  This project also required attention to detail and a close reading and detailed understanding of the HSC. All decisions made over the course of the project needed to be well-justified by the Steel Code, so we all developed a nuanced understanding of the pertinent clauses governing the design of the various structural members. We also ensured these clauses were reflected in the AutoCAD drawings we did. 
+      </p>
+    </div>
+   
+    <div class="row2" style="padding: 5px 20px">
+      <a href="zoom.html#hangar5" target="_blank">
+      <img src="images/spreadsheet_optimize.png">
+      </a>
+    </div>
+
+    <div class="row2">
+      <p>
+        Along with integrating the detailed structural analysis calculations into the spreadsheet, our team also developed an understanding of optimizing Excel for the purpose of automation and error-minimization. For example, we learned to link spreadsheets together to improve organization. We also implemented certain principles of software architecture like the use of design patterns (i.e., replicating the same spreadsheet structure across multiple different spreadsheets) to minimize user errors and improve ease of functionality. Similarly, in line with software architecture principles, we tried to minimize "dependencies" across the spreadsheets—I took care to investigate which spreadsheet cells should have fixed values, and which can be changed, and enforced a strict hierarchy throughout all spreadsheets so the base layer of data could not be altered by a user when doing a design check. This proved very helpful in improving our workflow and efficiency. Before, we had to manually reset certain parameters when doing a particular design check, but I used conditional code to encapsulate those steps within each spreadsheet. I also implemented visual cues to also improve user interaction with the spreadsheet. 
+      </p>
+    </div>
+   
 </div> <!--end of hangar-->
 
 
