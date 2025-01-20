@@ -12,6 +12,12 @@ h3 {
     padding: 20px 0px 5px 0px;
 }
 
+br {
+  display: block;
+  content: "";
+  margin-top: 5px;
+}
+
 .bold-blue {
 color: #00539f; 
 font-weight: bold;
@@ -32,7 +38,7 @@ body {
     border: 5px white;
     margin: auto auto;
     padding: 10px 40px;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 @media only screen and (max-width: 500px) {
