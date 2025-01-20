@@ -1,12 +1,12 @@
-@import "style.css";
-
 body {
     background-color: darkslategray;
     padding: 30px;
+    max-width: 1000px;
 }
 
 img {
     padding: 10px 10px 10px 10px;
+    object-fit: contain;
 }
 
 p {
@@ -14,11 +14,23 @@ p {
 }
 
 embed {
-    position: center;
     padding: 10px;
+    width: 800px;
+    height: 400px;
 }
 
 div {
     padding: 10px;
     background-color: #cfe2f3ff;
 }
+
+@media screen and (max-width: 500px) {
+    #hangar1, #hangar2, img {
+        display: block;
+    }
+    img, embed {
+        width: 300px;
+        object-fit: contain;
+        overflow: hidden;
+    }
+  }

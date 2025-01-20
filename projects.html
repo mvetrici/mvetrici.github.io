@@ -7,6 +7,7 @@
  <title>Projects</title>  
  <link href="css/projects.css" rel="stylesheet" /> 
  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+ <link rel="icon" href="https://www.svgrepo.com/show/115873/car.svg">
 </head> 
  
  <body> 
@@ -21,13 +22,13 @@
   </div>
 </div>
  <!--===== /Header ======-->
-
+<br>
 <div class="pages">
   <a class="glow-button" href="#miller">Miller (2024)</a>
   <a class="glow-button" href="#hangar">Steel hangar (2024)</a>
   <a class="glow-button" href="#habib">Habib (2023)</a>
 </div>
-
+<br>
 
 <!--===== Miller ======-->
 <div id="miller">
@@ -87,11 +88,18 @@
   </p>
 </div>
 <!--===== Miller ======-->
-
+<br>
 <!--------HANGAR--------->
-<div id="hangar"><h3 class="bold-blue" style="padding: 0px 20px">
-  Design of a Steel Hangar (class project)
+<div id="hangar">
+  <div class="row2">
+  <h3 class="bold-blue" style="padding: 20px 10px 0px 0px">
+  Design of a Steel Hangar (class project, Fall 2024)
+</h3></div>
+<div class="row2">
+<h3 style="padding: 0px 10px 0px 0px">
+  Course project to design a building including a hangar and office
 </h3>
+</div>
 
 <div class="row" style="padding: 5px 20px">
 <div class="column">
@@ -114,13 +122,14 @@
   
     <div class="row" style="padding: 5px 20px">
       <div class="column">
-        <a href="zoom.html#hangar1" target="_blank">
-          <img src="images/brace_calc.png">
+        <p>[AutoCAD]</p>
+        <!-- <a href="zoom.html#hangar1" target="_blank"> -->
+          <!-- <img src="images/brace_calc.png"> -->
           </a>
       </div>
       <div class="column">
-        <a href="zoom.html#hangar2" target="_blank">
-        <img src="images/connection_calc.png">
+        <!-- <a href="zoom.html#hangar2" target="_blank"> -->
+        <!-- <img src="images/connection_calc.png"> -->
         </a>
       </div>
       </div>
@@ -165,9 +174,52 @@
     </div>
    
 </div> <!--end of hangar-->
+<br>
+<div id="habib">
+  <div class="row2">
+  <h3 class="bold-blue" style="padding: 0px 20px">
+    Transportation Demand Modelling Research Paper (May-Aug 2023)
+</h3></div>
+<div class="row2">
+<h3 style="padding: 0px 20px; font-style: italic;">
+  How Frequent is Frequent Enough? Exploring the Relationship between the Approach to Identify Ride- sourcing Users and the Specification of Adoption Models
+</p></h3>
+</div>
 
+<div class="row2">
+    <img src="images/TRB photo jpg.jfif">
+</div>
 
-<div id="habib"><p>Habib</p></div>
+<div class="row2">
+<p>
+  After a UofT PhD grad came to speak in one of my first-year lectures about his financial analysis work with Uber, I became interested in the area of transportation modelling. I contacted the supervising professor and learned a current PhD student was working on a project an undergrad could lead. This led me to collaborate with two PhD students in UofT's Travel Demand Group to write a paper investigating models that predict ride-sourcing (e.g., Uber) demand. Although the project involved large datasets from surveys conducted in Toronto and Vancouver, the research question was relatively simple, asking how the way a Uber "user" is defined in a model can affect the model's result; in other words, what number of weekly or monthly trips should be used in household surveys to categorize respondents as ride-sourcing "users" or "non-users." 
+</p>
+</div>
+
+<div class="row2">
+    <p>
+      I conducted background research into current ride-sourcing models and reviewed existing literature on approaches to models. Through this research, I was able to compile a general framework to apply to the datasets provided by the Cities of Toronto and Vancouver. The general result of the model is summarized as a diagram.
+      To align with the current literature and industry modelling practices, we created and studied logistic regression models. However, since I had not previously modeled, I began by conducting research to understand the underlying assumptions, limitations, and theory of logistic regression models. I read textbooks, conducting additional research, and read code and documentation to understand the data analysis packages in R. Then, I made multiple logistic regression models using R. Each model was created using a different definition of a "ride-sourcing user" in order to better understand the impacts of customer behaviour and loyalty over the short- and long-term. 
+    </p>
+  </div>
+  <div class="row2">
+    <img src="images/SERVR ROC (fitted models).png">
+  </div>
+
+<div class="row2">
+<p>
+  Once the models were finished, I wrote the literature review, results and discussion sections of the final paper. I also evaluated the models based on research-backed metrics like ROC and R2 that estimate model accuracy. All methods suggested a relatively good fit. I learned to effectively take feedback from my supervisor and to appropriately draw conclusions from the models, i.e., creating nuanced interpretations that consider limitations. 
+  The paper was accepted for presentation at the Transportation Research Board 2024 Conference in Washington DC (see picture above). At this conference, I got the chance to present my research to researchers and policymakers from across Canada and the US. I also attended talks about the implementation of driverless cars in San Francisco, traffic management, and best practices for planning infrastructure to accommodate micro-mobility. I learned about the political, behavioral, and practical barriers to transportation ideas, the ways people are tackling them, and how my work could fit into that.
+</p>
+</div>
+
+<div class="row2" style="padding: 5px 20px">
+  <a href="zoom.html#habib" target="_blank">
+    <img class="linked" src="images/trb poster.png">
+  </a>
+</div>
+
+</div>
 
 
 <!--   
