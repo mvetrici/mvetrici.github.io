@@ -112,18 +112,18 @@ body {
 
 
 /* -------------- FOOTER -------------- */
-  #footery {
+  #contact {
     padding: 5px 10px 5px 10px;
     background-color: #00539f;
   }
   
-  #footery p {
+  #contact p {
     text-align: left;
     color: white;
     line-height: 0.75;
   }
   
-  #footery a {
+  #contact a {
     text-align: left;
     color: white;
     line-height: 0.75;
