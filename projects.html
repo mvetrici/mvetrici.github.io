@@ -23,10 +23,12 @@
 </div>
  <!--===== /Header ======-->
 <br>
+<div id="buttons"></div>
 <div class="pages">
-  <a class="glow-button" href="#miller">Bike modelling (2024)</a>
-  <a class="glow-button" href="#hangar">Steel hangar design (2024)</a>
-  <a class="glow-button" href="#habib">Demand modelling (2023)</a>
+  <a class="glow-button" href="#miller">Bike model (2024)</a>
+  <a class="glow-button" href="#hangar">Steel hangar (2024)</a>
+  <a class="glow-button" href="#habib">Demand model (2023)</a>
+  <a class="glow-button" href="#water">Sewer (2025)</a>
 </div>
 <br>
 
@@ -44,7 +46,7 @@
       Improving the implementation of bicycles in the <a href="https://tmg.utoronto.ca/doc/1.4/gtamodel/index.html" target="_blank">GTAModel</a> (written proposal, 2024)
     </h3>
     <p>
-      This proposal describes various steps in the development of the “bike mode” in the GTAModel. The  GTAModel is a regional transportation model used by the City of Toronto and Metrolinx and models various transportation modes like cars, trains, and walking, and is used to test outcomes of policy implementations like the OneFare program. 
+      The GTAModel is a regional transportation model used by the City of Toronto and Metrolinx. The model tests outcomes of transport policies (e.g., the One Fare Program). I heard about it through a past mentor, who did his master's with the professor that manages it. I decided to pursue the opportunity when I realized that this professor worked on a map I had seen in high school, which showed the distances cyclists could travel through downtown Toronto at various levels of bravery (i.e., the degree to which a cyclist is willing to travel along roads in high traffic). I was interested in implementing similar data into the GTAModel and the professor said that could be possible. 
     </p>
   </div>
   </div>
@@ -53,7 +55,7 @@
     <!-- text column -->
     <div class="column"> 
       <p>
-        I used Toronto’s OpenData portal and aggregated the data from Toronto's BikeShare stations and user trips. This was all done through Python (using the Pandas library) and required me to learn memory management as these datasets had more than 100,000 data points. I was able to use the data to understand trends in peak hour usage (top), and trips origins and destinations (bottom).
+        More specifically, we decided my task would be to 1) implement Toronto's BikeShare system into the model, 2) improve the accuracy of the bike network in the model, and 3) improve the route assignment step of the model for bike trips (i.e., choosing which routes a cyclist is most likely to take). I began by reading textbooks about transportation modelling, then conducted a literature review of bicycle modelling, along with preliminary data analysis to understand the existing bike usage data. This data was obtained from Toronto’s OpenData portal (Toronto's BikeShare stations and user trips) and aggregated with Python (using the Pandas library). 
       </p>
     </div> 
     <!-- images -->
@@ -68,13 +70,14 @@
   </div>
   
     <p class="alone">
-      Next, I needed to understand the specific routes bicyclists take in Toronto. To do so, I spatially aggregated the GTAModel's existing bicycle network and traffic analysis zones, a 2024 network created by another research group, and additional OpenData pedestrian and bike networks, to identify gaps in the model's bike network using ArcGIS (see image at top of page). During this process, I also documented the model's existing bike routes (for the research group), as well as propose new "links" (i.e., bike routes) within the model to represent the existing bike lanes throughout the city that were not captured within the model. 
+      While writing the program, I had to learn memory management. Since the OpenData datasets had more than 100,000 data points, I needed to apply software architecture and functional programming principles; for example, it is best to avoid storing data in the code and only modifying it, in order to conduct analysis. The outcome was a better understanding of trends in peak hour usage (top), and trips origins and destinations (bottom). 
+      I also tried to identify gaps in the model's existing bike network. To do so, I spatially aggregated the GTAModel's existing bicycle network and traffic analysis zones, a 2024 network created by another research group, and additional OpenData pedestrian and bike networks using ArcGIS. During this process, I documented the model's existing bike routes (for the research group), as well as propose new "links" (i.e., bike routes) to represent bike lanes that were not already captured in the model. 
     </p>
 
   <div class="row">
     <div class="column">
       <p>
-        To improve the prediction of bike trips, I created an algorithm using the API of third-party software (see image) used by the GTAModel to predict route choices. This algorithm required an in-depth understanding of the model in order to identify edge cases and boundary conditions relevant in classifying bike routes on different road and safety conditions. I read the model's and Emme's documentation, learned to use Emme, and reviewed the literature on conceptualizing bike networks. 
+        Next, I suggested a way to improve the route prediction of bike trips, I created an algorithm using the API of third-party software used by the GTAModel called Emme to predict route choices. The algorithm classified bike routes based on road and safety conditions, and required an in-depth understanding of so-called "traffic stress" that cyclists experience, and of the model. To identify relevant edge cases and boundary conditions, I read the model's and Emme's documentation, learned to use Emme, and reviewed literature on bike networks. 
       </p>
     </div>
     <div class="column">
@@ -84,22 +87,22 @@
   
 
   <p class="alone">
-    I used VSCode and GitHub for feedback and collaboration with my supervisor. This project developed my understanding of clean code & clean architecture principles, functional programming, and effective use of memory for managing large datasets. I also used GeoPandas and gained a better understanding of ArcGIS. Most importantly, I learned to work mostly independently and within an ambiguous framework: I originally had a list of requests from my supervisor that I had to figure out and turn into manageable, actionable tasks. 
-  </p>
+    I used VSCode and GitHub for feedback and collaboration with my supervisor, including learning clean code & clean architecture principles, functional programming, and effective use of memory when analysing large datasets. I also used GeoPandas and gained a better understanding of ArcGIS. Most importantly, I learned to work mostly independently and within an ambiguous framework: I originally had a list of requests from my supervisor that I had to figure out and turn into manageable, actionable tasks. In fact, the research I did was largely based on a work plan the professor created for me, but which I intentionally cut down to align with my current skill level. I realized that while pursuing every research route was technically possible, given enough time, I needed to choose a few routes that were practical and useful for me to pursue. 
+</p>
 </div>
 <!--===== Miller ======-->
-<br>
+
+<div class="divider"></div>
+
 <!--------HANGAR--------->
 <div id="hangar">
-  <div class="row2">
-  <h3 class="bold-blue" style="padding: 20px 10px 0px 0px">
-  Design of a Steel Hangar (class project, Fall 2024)
-</h3></div>
-<div class="row2">
-<h3 style="padding: 0px 10px 0px 0px">
-  Course project to design a building including a hangar and office
-</h3>
-</div>
+    <div style="padding: 5px">
+        <h3 class="bold-blue" style="padding:0px">
+          Design of a Steel Hangar (class project, Fall 2024)
+        </h3>
+        <h3 style="padding: 5px 0px">
+          Course project to design a building including a hangar and office</h3>
+    </div>
 
 <div class="row" style="padding: 5px 20px">
 <div class="column">
@@ -120,11 +123,11 @@
     </p>
 </div>
   
-    <div class="row" style="padding: 5px 20px">
+    <div style="padding: 5px 30px">
       <a href="zoom.html#autocad" target="_blank">
         <img src="images/civ312-autocad2.png">
         </a>
-    </div>
+      </div>
 
   <div class="row2">
     <p>
@@ -161,22 +164,26 @@
 
     <div class="row2">
       <p>
-        Along with integrating the detailed structural analysis calculations into the spreadsheet, our team also developed an understanding of optimizing Excel for the purpose of automation and error-minimization. For example, we learned to link spreadsheets together to improve organization. We also implemented certain principles of software architecture like the use of design patterns (i.e., replicating the same spreadsheet structure across multiple different spreadsheets) to minimize user errors and improve ease of functionality. Similarly, in line with software architecture principles, we tried to minimize "dependencies" across the spreadsheets—I took care to investigate which spreadsheet cells should have fixed values, and which can be changed, and enforced a strict hierarchy throughout all spreadsheets so the base layer of data could not be altered by a user when doing a design check. This proved very helpful in improving our workflow and efficiency. Before, we had to manually reset certain parameters when doing a particular design check, but I used conditional code to encapsulate those steps within each spreadsheet. I also implemented visual cues to also improve user interaction with the spreadsheet. 
+        Along with integrating the detailed structural analysis calculations into the spreadsheet, our team also developed an understanding of optimizing Excel for the purpose of automation and error-minimization. For example, we learned to link spreadsheets together to improve organization. We also implemented certain principles of software architecture like the use of design patterns (i.e., replicating the same spreadsheet structure across multiple different spreadsheets) to minimize user errors and improve ease of functionality. Similarly, in line with software architecture principles, we tried to minimize "dependencies" across the spreadsheets—I took care to investigate which spreadsheet cells should have fixed values, and which can be changed, and enforced a strict hierarchy throughout all spreadsheets so the base layer of data could not be altered by a user when doing a design check. This proved very helpful in improving our workflow and efficiency. Before, we had to manually reset certain parameters when doing a particular design check, but I used conditional code to encapsulate those steps within each spreadsheet. I implemented visual cues to also improve user interaction with the spreadsheet. 
       </p>
     </div>
    
-</div> <!--end of hangar-->
-<br>
+</div> 
+<!-----------end of hangar------------------>
+
+<div class="divider"></div>
+
+<!-----------------HABIB----------------->
 <div id="habib">
-  <div class="row2">
-  <h3 class="bold-blue" style="padding: 0px 20px">
-    Transportation Demand Modelling Research Paper (May-Aug 2023)
-</h3></div>
-<div class="row2">
-<h3 style="padding: 0px 20px; font-style: italic;">
-  How Frequent is Frequent Enough? Exploring the Relationship between the Approach to Identify Ride- sourcing Users and the Specification of Adoption Models
-</p></h3>
-</div>
+
+    <div style="padding: 5px">
+        <h3 class="bold-blue" style="padding:0px">
+          Transportation Demand Modelling Research Paper (May-Aug 2023)
+        </h3>
+        <h3 style="padding: 5px 0px; font-style: italic;">
+          How Frequent is Frequent Enough? Exploring the Relationship between the Approach to Identify Ride- sourcing Users and the Specification of Adoption Models
+        </h3>
+    </div>
 
 <div class="row2">
     <img src="images/TRB photo jpg.jfif">
@@ -211,13 +218,45 @@
   </a>
 </div>
 
-</div>
+</div> <!---END OF HABIB-->
 
+<div class="divider"></div>
+
+<!-----------WATER-------------->
+<div id="water">
+
+  <div class="row2">
+    <h3 class="bold-blue" style="padding: 20px 10px 0px 0px">
+    Design of a Municipal Water Network (class project, Winter 2025)
+  </h3></div>
+  <div class="row2">
+  <h3 style="padding: 0px 10px 0px 0px">
+    Course project to design a water distribution and sewer system for a proposed development.
+  </h3>
+  </div>
+
+  <div class="row2">
+    <p>
+    Over the course of two months in my Municipal Engineering class, my team worked to design a water distribution network and a sewer system for a proposed development in Brampton. This project required us to first learn to model water distribution networks using EPANet, which is a software used to predict velocities and pressures in pipes. Additionally, we had to plan out the pipe diameters and verify they aligned with guidelines set out in our Design Guidelines (created for the course). These were informed by the Ministry of Environment and other relevant sources. During this project, we also had client consultations, both with our TA and the client, who provided important priorities like cost reduction. When designing the sewer system, we used a spreadsheet (available in the PDF of the final submission). This process was highly iterative as sewer pipes are generally gravity-driven, which implicates various limitations, like ensuring the flow is "subcritical" (i.e., having a high enough depth for its velocity). At the same time, we had to make sure all pipes could adequately connect from the inlet to the outlet, all while experiencing sufficient drops at each junction, to make up for losses in energy due to turns, etc. The final report (available below) is evidence of what I learned about gravity pipe networks and sewage generation demand estimations. 
+    </p>
+  </div>
+
+  <div style="padding: 15px">
+    <a href="zoom.html#water" target="_blank">
+    <img src="images/sani_img.png">
+  </a></div>
+
+  <div class="row2">
+    <p>Ultimately, the proposed design met all the requirements, and provided a valuable learning experience by highlighting the importance of team communication and how to merge working styles. For example, some of our team preferred working in-person, at the same time, while other students preferred asynchronous work. This led to disagreements in meeting times and stilted work flows. We often experienced delays due to team members working on different aspects of the project at different times. We learned that we should try to compromise and meet semi-regularly to ensure the project is on track. Moreover, we used a shared document to indicate what tasks we accomplished and when, to allow other team members to be aware of the progress being made by the team.
+    </p>
+  </div>
+
+</div>
 
 <div id="contact">
   <p>Maria Vetrici, 2025</p>
-  <p><a href="mailto:maria.vetrici@mail.utoronto.ca">maria.vetrici@mail.utoronto.ca
-  </a></p>
+  <p><a href="mailto:maria.vetrici@mail.utoronto.ca">maria.vetrici@mail.utoronto.ca</a></p>
+  <p><a href="resume.html" target="_blank">See my resume!</a></p>
 </div>
 
  </body>  

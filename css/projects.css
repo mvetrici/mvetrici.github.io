@@ -24,7 +24,7 @@ float: left;
 padding: 5px;
 }
 
-#miller, #habib, #hangar {
+#miller, #habib, #hangar, #water {
   background-color: #cfe2f3ff;
   padding: 12px 15px;
 }
@@ -92,16 +92,35 @@ padding: 5px;
   box-shadow: 0 0 10px white;
 }
 
-#habib .linked:hover {
+#habib img:hover {
   transform: scale(1.04);
   transition: transform .6s;
   box-shadow: 0 0 10px white;
 }
 
-#hangar, #habib p {
-  padding: 0px 10px 10px 20px;
+#water img:hover {
+  transform: scale(1.04);
+  transition: transform .6s;
+  box-shadow: 0 0 10px white;
+}
+
+#miller p {
+  padding: 20px 10px 10px 20px;
+}
+#hangar p {
+  padding: 20px 10px 10px 20px;
+}
+#habib p {
+  padding: 20px 10px 10px 20px;
+}
+#water p {
+  padding: 20px 10px 10px 20px;
 }
 
 #habib img {
-  width: 600px;
+  width: 400px;
+}
+
+.divider div {
+  padding: 30px;
 }
