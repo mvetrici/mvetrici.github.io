@@ -52,7 +52,7 @@
 }
 
 .map-container p {
-  padding: 0px 10px 15px 10px;
+  padding: 10px 10px 15px 10px;
 }
 
 /* .map-container:hover img {
@@ -89,6 +89,20 @@
   color: white;
 }
 
+.map-button2 a {
+  color: #00539f;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 25px;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+}
+
+.map-button2 a:hover {
+  background-color: #00539f;
+  color: white;
+}
 
 @media screen and (max-width: 700px) {
   .map-button a {
